@@ -1,0 +1,336 @@
+/*
+	This is the stylesheet for the NACC documentation.
+	It is not necessary for operation of the actual NACC itself.
+*/
+
+* { margin: 0; padding: 0 }
+
+select {
+	border: 1px solid #555;
+	padding:auto !important;
+}
+
+div#cleantime_calculator {
+	background-color: #555;
+	padding: 4px;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Verdana, Arial, san-serif;
+    font-size: medium;
+}
+
+body {
+    background-color: #ccc;
+}
+
+a:visited,
+a {
+    color: #c00;
+    text-decoration: underline;
+}
+
+a:active,
+a:hover {
+    color: #00c;
+    text-decoration: none;
+}
+
+blockquote {
+	padding-top:8px;
+	padding-bottom:8px;
+	margin-right: 2em;
+	margin-left: 2em;
+	margin-top: 4px;
+	background-color: white;
+	color: #555;
+	border-top: 1px solid #333;
+	border-left: 1px solid #333;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+blockquote ul {
+	margin-left: 2em;
+	margin-right: 0.25em;
+}
+
+blockquote.dark {
+	background-color: #eee;
+	color: #333;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+}
+
+p {
+    text-indent: 1em;
+    margin-top: 0.5em;
+}
+
+p.first {
+    text-indent: 0em;
+    margin-top: 0;
+}
+
+h2.pageHeader {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+div#main_content {
+    padding: 8px;
+    text-align: center;
+}
+
+div#nacc_content {
+    width: 61em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.white_tag,
+img.white_tag_ie,
+img.orange_tag,
+img.orange_tag_ie,
+img.green_tag,
+img.green_tag_ie,
+img.red_tag,
+img.red_tag_ie,
+img.blue_tag,
+img.blue_tag_ie,
+img.yellow_tag,
+img.yellow_tag_ie,
+img.dayglo_tag,
+img.dayglo_tag_ie,
+img.gray_tag,
+img.gray_tag_ie,
+img.black_tag,
+img.black_tag_ie,
+img.purple_tag,
+img.purple_tag_ie,
+img.nacc_logo,
+img.nacc_logo_ie,
+img.nacc_logo_static,
+img.nacc_logo_static_ie {
+    width: 141px;
+    height: 256px;
+    border:none;
+	 background-position: center;
+	 background-repeat: none;
+}
+
+div#sidebar {
+    float:left;
+    width: 11em;
+}
+
+ul#navbar {
+    text-align: left;
+    display: block;
+    list-style-type: none;
+    text-indent: none;
+    margin: 0;
+    margin-top: 8px;
+    margin-right: 8px;
+    border-top: 2px solid #555;
+    padding: 0;
+    padding-top: 8px;
+}
+
+ul#navbar li {
+    display: block;
+    width: 100%;
+}
+
+ul#navbar li a {
+    display: block;
+    width: 100%;
+}
+
+ul#navbar li span {
+    display: none;
+    font-weight: bold;
+    width: 100%;
+}
+
+body#body_index a#home_link {
+    display: none;
+}
+
+body#body_index span#home_span {
+    display: block;
+}
+
+body#body_install a#install_link {
+    display: none;
+}
+
+body#body_install span#install_span {
+    display: block;
+}
+
+body#body_theme a#theme_link {
+    display: none;
+}
+
+body#body_theme span#theme_span {
+    display: block;
+}
+
+body#body_custom a#custom_link {
+    display: none;
+}
+
+body#body_custom span#custom_span {
+    display: block;
+}
+
+div#nacc_content_text {
+    float:left;
+    width: 49em;
+}
+
+div#text_content {
+    clear: both;
+    text-align: left;
+    padding: 8px;
+    color: #333;
+    background-color: #eee;
+    border-top: 1px solid #333;
+    border-left: 1px solid #333;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+div.image_display {
+    text-align: center;
+    padding: 4px;
+}
+
+a.nacc_home_logo {
+    display: block;
+    width: 141px;
+    height: 256px;
+}
+
+a.nacc_home_logo img.nacc_logo {
+    background-image:url(images/beanie.png);
+	 background-position: center;
+	 background-repeat: none;
+}
+
+img.nacc_logo_static,
+a.nacc_home_logo:hover img.nacc_logo,
+a.nacc_home_logo:active img.nacc_logo {
+    background-image:url(images/beanie_mouseover.png);
+	 background-position: center;
+	 background-repeat: none;
+}
+
+a.nacc_home_logo img.nacc_logo_ie {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='Enabled',src='images/beanie.png', sizingMethod='image');   
+}
+
+a.nacc_home_logo:hover img.nacc_logo_ie,
+img.nacc_logo_static_ie,
+a.nacc_home_logo:active img.nacc_logo_ie {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='Enabled',src='images/beanie_mouseover.png', sizingMethod='image');   
+}
+
+img.white_tag {
+    background-image:url(../images/Day_1_H.png);
+}
+
+img.white_tag_ie {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='Enabled',src='../images/Day_1_H.png', sizingMethod='image');   
+}
+
+img.orange_tag {
+    background-image:url(../images/Day_30_H.png);
+}
+
+img.orange_tag_ie {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='Enabled',src='../images/Day_30_H.png', sizingMethod='image');   
+}
+
+img.green_tag {
+    background-image:url(../images/Day_60_H.png);
+}
+
+img.green_tag_ie {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='Enabled',src='../images/Day_60_H.png', sizingMethod='image');   
+}
+
+img.red_tag {
+    background-image:url(../images/Day_90_H.png);
+}
+
+img.red_tag_ie {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='Enabled',src='../images/Day_90_H.png', sizingMethod='image');   
+}
+
+img.blue_tag {
+    background-image:url(../images/Month_6_H.png);
+}
+
+img.blue_tag_ie {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='Enabled',src='../images/Month_6_H.png', sizingMethod='image');   
+}
+
+img.yellow_tag {
+    background-image:url(../images/Month_9_H.png);
+}
+
+img.yellow_tag_ie {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='Enabled',src='../images/Month_9_H.png', sizingMethod='image');   
+}
+
+img.dayglo_tag {
+    background-image:url(../images/Month_12_H.png);
+}
+
+img.dayglo_tag_ie {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='Enabled',src='../images/Month_12_H.png', sizingMethod='image');   
+}
+
+img.gray_tag {
+    background-image:url(../images/Month_18_H.png);
+}
+
+img.gray_tag_ie {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='Enabled',src='../images/Month_18_H.png', sizingMethod='image');   
+}
+
+img.black_tag {
+    background-image:url(../images/Month_24_H.png);
+}
+
+img.black_tag_ie {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='Enabled',src='../images/Month_24_H.png', sizingMethod='image');   
+}
+
+img.purple_tag {
+    background-image:url(../images/Decades_H.png);
+}
+
+img.purple_tag_ie {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='Enabled',src='../images/Decades_H.png', sizingMethod='image');   
+}
+
+p.code {
+	font-family: "Courier New", Courier, mono;
+	font-size:medium;
+	text-indent: 0em;
+	margin-left: 2em;
+}
+
+form#ChangeStyle {
+	text-align: center;
+	margin: 8px;
+}
