@@ -1,4 +1,4 @@
-=== BMLT WordPress Plugin ===
+=== NACC WordPress Plugin ===
 Contributors: magblogapi
 Tags: na, cleantime calculator, nacc, recovery, addiction, webservant
 Requires at least: 2.0
