@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>NACC Documentation</title>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <!--[if lte IE 6]>
+            <script type="text/javascript">
+            // <![CDATA[
+                function getElementsByClassName (className, nodeList) {
+                    var returnElms = new Array();
+                    var className = className.replace(/\-/g, "\\-");
+                    var regExp = new RegExp("(^|\\s)" + className + "(\\s|$)");
+                    if ( !nodeList ) {
+                        nodeList = document.body.childNodes;
+                        }
+                    if ( nodeList ) {
+                        var ii = 0;
+                        for(var i=0; i < nodeList.length; i++){
+                            elm = nodeList[i];		
+                            if ( regExp.test( elm.className ) ){
+                                returnElms[ii++] = elm;
+                            }
+                            if ( elm.childNodes && elm.childNodes.length ) {
+                                returnElms = returnElms.concat(getElementsByClassName (className, elm.childNodes));
+                                }
+                        }
+                    }
+                    return (returnElms);
+                }
+                
+                function IE_Ify(className) {
+                    var elems = getElementsByClassName ( className );
+                    for ( var i = 0; i < elems.length; i++ ) {
+                        elems[i].className += '_ie';
+                        }
+                }
+                
+                window.onload=function() {
+                    document.getElementById('thebeanie').className='nacc_logo_ie';
+                    IE_Ify ( 'white_tag' );
+                    IE_Ify ( 'orange_tag' );
+                    IE_Ify ( 'green_tag' );
+                    IE_Ify ( 'red_tag' );
+                    IE_Ify ( 'blue_tag' );
+                    IE_Ify ( 'yellow_tag' );
+                    IE_Ify ( 'dayglo_tag' );
+                    IE_Ify ( 'gray_tag' );
+                    IE_Ify ( 'black_tag' );
+                    }
+            // ]]>
+            </script>
+        <![endif]-->
+    </head>
+    <body id="body_custom">
+        <div id="main_content">
+            <div id="nacc_content">
+                <div id="sidebar">
+                    <a class="nacc_home_logo" href="index.html"><img src="../images/one_pixel.gif" alt="Beanie Logo" id="thebeanie" class="nacc_logo"/></a>
+                    <ul id="navbar">
+                        <li><a id="home_link" href="index.html">About NACC</a><span id="home_span">About NACC</span></li>
+                        <li><a id="install_link" href="install.html">Installing NACC</a><span id="install_span">Installing NACC</span></li>
+                    		<li><a id="theme_link" href="themes.html">NACC Themes</a><span id="theme_span">NACC Themes</span></li>
+                    		<li><a id="custom_link" href="customizing.html">Customized NACC</a><span id="custom_span">Customized NACC</span></li>
+                    </ul>
+                </div>
+                <div id="nacc_content_text">
+                    <h1 id="nacc_header">The N.A. Cleantime Calculator (NACC) </h1>
+                    <div id="text_content">
+                        <h2 class="pageHeader">Customized NACC</h2>
+                        <p class="first">NACC was designed to be modified. You
+                        	can do all of the modifications through CSS. We provide
+                        	<a href="themes.html">three default theme files</a>, but you can easily create
+                        	your own.</p>
+                        <p>Here's a manifest of the styles that are overloaded
+                        	in the default theme files (<strong>NOTE:</strong> These
+                        	are all low-specificity overloads):</p>
+								<blockquote><ul>
+								<li><strong>div.nacc_main</strong><br />This is the main surrounding "box" of the calculator.</li>
+								<li><strong>div.nacc_results</strong><br />This is the area in which both the textual results and the keytags are displayed.</li>
+								<li><strong>div.nacc_msg</strong><br />This is where the textual results are displayed. This is not displayed until you press &quot;Calculate.&quot;</li>
+								<li><strong>div.nacc_keytags</strong><br />This is where the keytags are displayed. This is not displayed until you press &quot;Calculate.&quot;</li>
+								<li><strong>span.nacc_title</strong><br />This is the overall title that is displayed at the top of the main section.</li>
+								<li><strong>span.nacc_prompt</strong><br />
+								This is the prompt, asking you to enter your cleandate.</li>
+								<li><strong>a.nacc_reset_link</strong><br />This is displayed in the main area to reset the cleandate to today.</li>
+								<li><strong>a.nacc_change_link</strong><br />This is the link displayed in the keytags area to change the layout.</li>
+								</ul></blockquote>
+                        <p>There are a great many more classes and IDs that you
+                        	can use in your customization. Our three defaults
+                        	are meant to illustrate a very simple modification.</p>
+                        <p>Feel free to explore the implementation, but remember
+                        	that most of the calculator is generated dynamically,
+                        	as direct DOM construction. This means that you can't
+                        	just peek at the page source to see what the code
+                        	looks like.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

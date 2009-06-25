@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>NACC Documentation</title>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <!--[if lte IE 6]>
+            <script type="text/javascript">
+            // <![CDATA[
+                function getElementsByClassName (className, nodeList) {
+                    var returnElms = new Array();
+                    var className = className.replace(/\-/g, "\\-");
+                    var regExp = new RegExp("(^|\\s)" + className + "(\\s|$)");
+                    if ( !nodeList ) {
+                        nodeList = document.body.childNodes;
+                        }
+                    if ( nodeList ) {
+                        var ii = 0;
+                        for(var i=0; i < nodeList.length; i++){
+                            elm = nodeList[i];		
+                            if ( regExp.test( elm.className ) ){
+                                returnElms[ii++] = elm;
+                            }
+                            if ( elm.childNodes && elm.childNodes.length ) {
+                                returnElms = returnElms.concat(getElementsByClassName (className, elm.childNodes));
+                                }
+                        }
+                    }
+                    return (returnElms);
+                }
+                
+                function IE_Ify(className) {
+                    var elems = getElementsByClassName ( className );
+                    for ( var i = 0; i < elems.length; i++ ) {
+                        elems[i].className += '_ie';
+                        }
+                }
+                
+                window.onload=function() {
+                    document.getElementById('thebeanie').className='nacc_logo_ie';
+                    IE_Ify ( 'white_tag' );
+                    IE_Ify ( 'orange_tag' );
+                    IE_Ify ( 'green_tag' );
+                    IE_Ify ( 'red_tag' );
+                    IE_Ify ( 'blue_tag' );
+                    IE_Ify ( 'yellow_tag' );
+                    IE_Ify ( 'dayglo_tag' );
+                    IE_Ify ( 'gray_tag' );
+                    IE_Ify ( 'black_tag' );
+                    }
+            // ]]>
+            </script>
+        <![endif]-->
+</head>
+    <body id="body_install">
+        <div id="main_content">
+            <div id="nacc_content">
+                <div id="sidebar">
+                    <a class="nacc_home_logo" href="index.html"><img src="../images/one_pixel.gif" alt="Beanie Logo" id="thebeanie" class="nacc_logo"/></a>
+                    <ul id="navbar">
+                        <li><a id="home_link" href="index.html">About NACC</a><span id="home_span">About NACC</span></li>
+                        <li><a id="install_link" href="install.html">Installing NACC</a><span id="install_span">Installing NACC</span></li>
+                    		<li><a id="theme_link" href="themes.html">NACC Themes</a><span id="theme_span">NACC Themes</span></li>
+                    		<li><a id="custom_link" href="customizing.html">Customized NACC</a><span id="custom_span">Customized NACC</span></li>
+                    </ul>
+                </div>
+                <div id="nacc_content_text">
+                    <h1 id="nacc_header">The N.A. Cleantime Calculator (NACC) </h1>
+                    <div id="text_content">
+                        <h2 class="pageHeader">Installing NACC</h2>
+                        <p class="first">NACC is very easy to install. It has
+                        	been designed as a standalone package. It requires
+                        	including one JavaScript file, and two CSS files into
+                        	the &lt;head&gt;&lt;/head&gt; section of your Web page. You invoke
+                        	it by calling one JavaScript function.</p>
+                        <p>NACC has also been designed as a <a href="http://wordpress.org/">WordPress</a> plugin.
+                        	If you have a WordPress blog, NACC will easily fit
+                        	into any page or post that you desire. </p>
+                        <p>First, get the code. The current version is available
+                        	by going to this page, and downloading the latest
+                        	version of the NACC: <a href="http://sourceforge.net/project/showfiles.php?group_id=209495&amp;package_id=251359">http://sourceforge.net/project/showfiles.php?group_id=209495&amp;package_id=251359</a></p>
+                       <p>You start by including the entire nacc directory into
+                        	your Web server files. Here is a manifest of the NACC
+                        	directory:</p>
+                        <p>&nbsp;</p>
+                        <h3>NACC Directory Manifest:</h3><br />
+                        <blockquote><ul>
+                        	<li><strong><a href="../changelog.txt">changelog.txt</a></strong><br />
+                        		This is a file that explains the
+                       		current version, and changes made to the NACC. </li>
+                    	  		<li><strong><a href="../demo.html">demo.html</a></strong><br />
+                    	  		This is a standalone demonstration of the NACC, using
+                 	  			the &quot;BT&quot; theme. </li>
+                        	<li><strong><em>docs (directory)</em></strong><br />
+                        	This contains this documentation.</li>
+                        	<li><strong><em>images (directory)</em></strong><br />
+                        	This contains all the images used in the NACC. </li>
+                        	<li><strong>nacc.css</strong><br />
+                        	This is the principal CSS file for the NACC. It needs
+                       		to be installed, regardless of what theme is used. </li>
+                        	<li><strong>nacc.js</strong><br />
+                        	This is the &quot;heart&quot; of the NACC. It is an extensively-documented
+                       		JavaScript file that holds all of the NACC code. </li>
+                        	<li><strong>nacc.php</strong><br />
+                        	This is the WordPress plugin file. It has been written
+                        		using the &quot;BT&quot; theme.<br />
+                        		<strong><br />
+                        		The following three files implement our included
+                       		&quot;themes&quot;:</strong><br />
+                       		<br />
+                        	</li>
+                        	<li><strong>nacc_theme_bt.css</strong><br />
+                        	This uses the &quot;Basic Text&quot; &quot;blue and white&quot;color theme. </li>
+                        	<li><strong>nacc_theme_hw.css</strong>  <br />
+                        	This uses the &quot;It Works -How and Why&quot; &quot;green and gold&quot;
+                       		theme. </li>
+                        	<li><strong>nacc_theme_jft.css</strong><br />
+                        	This uses the &quot;Just For Today&quot; &quot;red and gray&quot; theme
+                       		colors. </li>
+                        </ul>
+                        </blockquote>
+                        <h3>&nbsp;</h3>
+                        <h3>Installing NACC in a regular HTML-based Web Site:</h3>
+                        <p class="first"><br />
+                        	You'll need to edit the &lt;head&gt; section
+                        	of your file. For this example, we'll assume that
+                        	the nacc directory is at the same level as the file
+                        	that will implement it:</p>
+                        <p class="code">&lt;html&gt;<br />
+                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;NACC Test&lt;/title&gt;<br />                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;script type=&quot;text/javascript&quot; src=&quot;nacc/nacc.js&quot;&gt;&lt;/script&gt;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel=&quot;stylesheet&quot; href=&quot;nacc/nacc.css&quot; type=&quot;text/css&quot; /&gt;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel=&quot;stylesheet&quot; href=&quot;<strong>nacc/nacc_theme_bt.css</strong>&quot; type=&quot;text/css&quot; /&gt;<br />
+							   &lt;/head&gt;<br />
+                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<big><strong>•</strong></big><br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<big><strong>•</strong></big><br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<big><strong>•</strong></big><br />
+                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br />&lt;/html&gt;</p>
+                        <p>Note the highlighted &quot;nacc/nacc_theme_bt.css&quot;.
+                        	This is the theme CSS file. You can exchange it for
+                        	either of the other two we've provided (&quot;nacc/nacc_theme_hw.css&quot;
+                        	or &quot;nacc/nacc_theme_jft.css&quot;). You could also
+                        	write your own, or modify one of the default themes.
+                        	Including another theme after the one provided will
+                        	override it.</p>
+                        <p>The only other steps are to provide a &quot;container&quot;
+                        	&lt;div&gt; element, and then to invoke the NACC. These
+                        	are done in the &lt;body&gt; section of your file:</p>
+                        <p class="code">&lt;html&gt;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br />
+                    		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<big><strong>•</strong></big><br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<big><strong>•</strong></big><br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<big><strong>•</strong></big><br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;body <strong>onload=&quot;NACC_CleanTime('cleantime_calculator','nacc')&quot;</strong>&gt;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>&lt;div id=&quot;cleantime_calculator&quot;&gt;&lt;/div&gt;</strong><br />
+							   &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br />&lt;/html&gt;</p>
+								<p>We are invoking it with all the options (explained below) as default
+									(except the path). The only required parameter to
+									the NACC_CleanTime() function is the DOM ID of the
+									element that will contain it.</p>
+								<p>Because the NACC is JavaScript-based, you should put a &lt;noscript&gt;
+									section into the &quot;container.&quot; This gives a message
+									to visitors that don't have JavaScript enabled:</p>
+                        <p class="code">&lt;html&gt;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br />
+                    		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<big><strong>•</strong></big><br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<big><strong>•</strong></big><br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<big><strong>•</strong></big><br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;body onload=&quot;NACC_CleanTime('cleantime_calculator','nacc')&quot;&gt;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div
+                        id=&quot;cleantime_calculator&quot;&gt;<strong>&lt;noscript&gt;&lt;h1&gt;JavaScript
+                        Not Enabled&lt;/h1&gt;&lt;h2&gt;Unfortunately, the cleantime
+                        calculator relies on JavaScript, and your browser does
+                        not support JavaScript.&lt;/h2&gt;&lt;/noscript&gt;</strong>&lt;/div&gt;<br />
+							   &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br />&lt;/html&gt;</p>
+								<p>That leaves us with the following as a complete implementation of
+									the NACC in the "Basic Text" theme:</p>
+								<p class="code">&lt;html&gt;<br />
+                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;NACC Test&lt;/title&gt;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;script type=&quot;text/javascript&quot; src=&quot;nacc/nacc.js&quot;&gt;&lt;/script&gt;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel=&quot;stylesheet&quot; href=&quot;nacc/nacc.css&quot; type=&quot;text/css&quot; /&gt;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel=&quot;stylesheet&quot; href=&quot;nacc/nacc_theme_bt.css&quot; type=&quot;text/css&quot; /&gt;<br />
+							   &lt;/head&gt;<br />
+                        &nbsp;&nbsp;&nbsp;&lt;body onload=&quot;NACC_CleanTime('cleantime_calculator','nacc')&quot;&gt;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id=&quot;cleantime_calculator&quot;&gt;&lt;noscript&gt;&lt;h1&gt;JavaScript
+                        Not Enabled&lt;/h1&gt;&lt;h2&gt;Unfortunately, the cleantime
+                        calculator relies on JavaScript, and your browser does
+                        not support JavaScript.&lt;/h2&gt;&lt;/noscript&gt;&lt;/div&gt;<br />
+							   &lt;/body&gt;<br />&lt;/html&gt;</p>
+                        <h3>&nbsp;</h3>
+                        <h3>Installing NACC in a WordPress Blog:</h3>
+                        <p class="first"><br />
+                        You'll need to start by placing the nacc directory into
+                        the wp-content/plugins/ directory. Go into the &quot;plugins&quot;
+                        pane of the admin interface, and activate &quot;nacc&quot;. This
+                        will give you the default &quot;BT&quot; theme, with cookies enabled
+                        (saves the user's cleantime). You can edit the &quot;nacc.php&quot;
+                        file to make adjustments to the included theme file and
+                        the options.</p>
+                        <p>In order to invoke the NACC in a page or a post, you
+                        	need to add the following content (in the &quot;code&quot; pane
+                        	of the editor):</p>
+                        <p class="code">&lt;!-- NACC --&gt;</p>
+                        <p>This comment will be replaced by the cleantime calculator.
+                        	You don't need to do anything else, and the comment
+                        	can be mixed in with a bunch of other text. Just remember
+                        	that calculating the cleantime can result in a great
+                        	many tags being displayed, so text under it may be
+                        	a long vertical scroll down.</p>
+                        <h3>&nbsp;</h3>
+                        <h3>NACC Options:</h3>
+                        <p class="first"><br />
+                        There are a number of optional arguments to the function
+                        	call that invokes the NACC:</p>
+                        <p class="first">&nbsp;</p>
+								<blockquote><ul>
+                        	<li><strong>pContainerId</strong><br />
+                        		This is the only required parameter. This must be the DOM ID of the containing HTML element.</li>
+                        	<li><strong>pPathToNACC</strong><br />
+                        	This is the path to the main NACC directory (the &quot;nacc&quot;
+                        		directory). If the code is actually inside the
+                       		nacc directory, this can be left blank. The path is
+                        		relative to the file that is implementing the NACC. </li>
+									<li><strong>pUseCookie</strong><br />
+										Set this to true if you want to use a cookie to remember the visitor's
+									cleantime and layout preference. Default is off. </li>
+									<li><strong>pChained</strong><br />
+									  Set this to true if you want the default layout to be a long, vertical
+									  	chain. Otherwise, the default layout will be &quot;tabletop,&quot; which is
+								  	a horizontal row of overlapping keytags.</li>
+									<li><strong>pHideTags</strong><br />
+									   The tags are fairly substantial files. In some cases, you may not
+									   	want to burden your visitors with having to
+									   	download them. In this case, set this to true. Otherwise, the keytags
+									   	will always be displayed. <br />
+									</li>
+								</ul>
+								</blockquote>
+                        <p class="first"><br />
+                       	The calling syntax for the NACC function is:</p>
+                        <p class="code">NACC_CleanTime(pContainerId, pPathToNACC,
+                       	pUseCookie, pChained, pHideTags);</p>
+                        <p>Hopefully, this will explain how to use the NACC to
+                        	your satisfaction. If you want to know more, the <a href="../nacc.js">nacc.js</a> file is heavily documented.   </p>
+                        <h3>&nbsp;</h3>
+                        <h3>NEW IN 2.0: Persian (Iranian) Calendar Support</h3>
+                        <p class="first"><br />
+                        	The Iranians (and Afghani) use <a href="http://www.oxfordpersian.com/Cultural/calender.htm">a
+                        	different calendar system</a> than Western nations.
+                        	It is called the &quot;Solar&quot;
+                        		or Shamsi Calendar. We have added support for this.
+                        		Thanks to <a href="http://www.nairan.org/">NA Iran</a> for
+                        		helping us to test and localize it.</p>
+                        <p>In order to use this, you need to set the <em>gCalendarType</em>                        	variable
+                       	in <a href="../nacc.js">nacc.js</a> to &quot;Persian&quot; (It is &quot;Gregorian&quot; by default).</p>
+                        <p>&nbsp;</p>
+                        <h3>NEW IN 1.7: DECADES CLEAN (PURPLE) TAG</h3>
+                       	<p class="first"><br />
+								We have added a new, optional keytag (Purple "Decades" tag, that will show every ten years after ten (20, 30, etc.).</p>
+								<p>In order to enable this, set the <em>gUseDecadesTag</em> variable
+									in <a href="../nacc.js">nacc.js</a> to <strong>true</strong> (It is false by default).</p>
+                       <h3>&nbsp;</h3>
+                        <h3>A NOTE ABOUT THE FIPT:</h3>
+                        <p class="first"><br />
+                    	   The symbol used in the keytags is the registered N.A.
+                    	   	symbol. It should only be displayed by duly authorized
+                    	   	official N.A. Web sites (sites for official N.A. Service
+                    	   	bodies, like Regions, Zonal Forums, Metro Areas, Area
+                    	   	Service Committees or Groups).</p>
+                        <p>Official N.A. Service symbols are covered by the <a href="http://www.na.org/legal/bulletins-fipt.htm">FIPT</a>	(<strong>F</strong>ellowship <strong>I</strong>ntellectual <strong>P</strong>roperty <strong>T</strong>rust), and must
+                        	be treated respectfully and properly at all times.  </p>
+                        <p>In the general version of the NACC, we provide
+                        	&quot;generic&quot; keytags that do not have the official N.A.
+                        	symbol on them. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
