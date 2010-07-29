@@ -2,8 +2,8 @@
 Contributors: magblogapi
 Tags: na, cleantime calculator, nacc, recovery, addiction, webservant
 Requires at least: 2.0
-Tested up to: 2.8
-Stable tag: 2.0.9
+Tested up to: 3.0
+Stable tag: 2.0.10
 
 == Description ==
 
@@ -15,7 +15,7 @@ That text will be replaced with this cleantime calculator.
 
 1. Upload `the nacc` directory to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Place `<!-- NACC -->` in the HTML view of a page. It will be replaced by the plugin.
+3. Place `<!-- NACC -->`in the HTML view, or `[[NACC]]` in either view, of a page. It will be replaced by the plugin.
 
 == Screenshots ==
 
@@ -24,6 +24,10 @@ That text will be replaced with this cleantime calculator.
 3. The horizontal tag layout
 
 == Changelog ==
+
+Version 2.0.10- July 29, 2010
+	Fixed a bug that seems to be caused by a JavaScript issue for leap years.
+	Added the ability to specify the plugin as standard WP shortcode ([[NACC]]).
 
 Version 2.0.9- June 24, 2009
 	Fixed some issues in the WordPress plugin that interfered with "pretty permalinks."

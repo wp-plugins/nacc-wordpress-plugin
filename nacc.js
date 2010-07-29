@@ -1,7 +1,7 @@
 ﻿/*
     NACC: The N.A. Cleatime Calculator
 
-    Version: 2.0.8
+    Version: 2.0.10
     
     See changelog.txt for details of changes
 
@@ -401,10 +401,7 @@ function NACC_CleanTime ( pContainerId, pPathToNACC, pUseCookie, pChained, pHide
 		switch ( gCalendarType ) {
 			default:
 				var td_date = new Date();
-				td_date.setFullYear(in_year);
-				td_date.setMonth(in_month - 1);
-				td_date.setDate(in_day);
-				
+				td_date.setFullYear(in_year, in_month - 1, in_day);
 				return td_date;
 			break;
 			
@@ -553,13 +550,14 @@ function NACC_CleanTime ( pContainerId, pPathToNACC, pUseCookie, pChained, pHide
 	
 	//  gregorianToJd  --  Determine Julian day number from Gregorian calendar date
 	function gregorianToJd(year, month, day){
-		return (GREGORIAN_EPOCH - 1) +
+		var yDay = (GREGORIAN_EPOCH - 1) +
 			   (365 * (year - 1)) +
 			   Math.floor((year - 1) / 4) +
 			   (-Math.floor((year - 1) / 100)) +
 			   Math.floor((year - 1) / 400) +
 			   Math.floor((((367 * month) - 362) / 12) +
-			   ((month <= 2) ? 0 : (leapGregorian(year) ? -1 : -2) ) + day);
+			   ((month <= 2) ? 0 : (leapGregorian(year) ? -1 : -2)) + day);
+		return yDay;
 	}
 	
 	//  jdToGregorian  --  Calculate Gregorian calendar date from Julian day
@@ -674,6 +672,7 @@ function NACC_CleanTime ( pContainerId, pPathToNACC, pUseCookie, pChained, pHide
         theForm.className = 'nacc_form';
 
         // Submitting the form calculates cleantime, but does not cause a page to be submitted to server.
+
         theForm.onsubmit = SubmitForm;
 
         // Create empty month <select> and add it to <form>. It will be filled later.
